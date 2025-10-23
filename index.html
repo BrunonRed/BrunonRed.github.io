@@ -3,16 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio</title>
+  <title>Jesús Moreno Jiménez - Desarrollador de Videojuegos</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 2rem; }
-    h1 { color: #007acc; }
-    a { text-decoration: none; color: #333; }
+    /* ===== ESTILOS GENERALES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: #38bdf8;
+      margin-bottom: 0.5rem;
+    }
+
+    header h2 {
+      font-weight: 400;
+      color: #94a3b8;
+    }
+
+    .foto {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 1.5rem;
+      border: 3px solid #38bdf8;
+    }
+
+    section {
+      max-width: 700px;
+      background-color: #1e293b;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    section h3 {
+      font-size: 1.5rem;
+      color: #38bdf8;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      background-color: #334155;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    li:hover {
+      background-color: #475569;
+    }
+
+    footer {
+      margin-top: 2rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
-  <h1>¡Hola! Soy [Tu Nombre]</h1>
-  <p>Desarrollador web | Diseñador | [Tu especialidad]</p>
-  <p>Encuéntrame en <a href="https://github.com/tuusuario" target="_blank">GitHub</a></p>
+  <header>
+    <h1>Jesús Moreno Jiménez</h1>
+    <h2>Programador de Jugabilidad | Desarrollo de Videojuegos</h2>
+    <!-- Puedes reemplazar esta URL por la de tu propia foto -->
+    <img src="https://via.placeholder.com/150" alt="Foto de Jesús Moreno Jiménez" class="foto">
+  </header>
+
+  <section id="sobre-mi">
+    <h3>Sobre Mí</h3>
+    <p>
+      ¡Hola! Soy <strong>Jesús Moreno Jiménez</strong>, un apasionado del desarrollo de videojuegos.
+      Mi principal interés está en la <strong>programación de la jugabilidad</strong>, donde puedo dar vida
+      a las ideas y mecánicas que hacen que un juego se sienta divertido y único.
+    </p>
+    <p>
+      Me motiva crear experiencias interactivas que conecten con las personas, y busco seguir
+      creciendo como desarrollador en equipos creativos donde pueda aportar y aprender cada día.
+    </p>
+  </section>
+
+  <section id="especializacion">
+    <h3>Áreas de Especialización</h3>
+    <ul>
+      <li><strong>Rol Principal:</strong> Programador de Jugabilidad</li>
+      <li><strong>Engines:</strong> Unity, Godot</li>
+      <li><strong>Lenguajes:</strong> C#</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 Jesús Moreno Jiménez | Portafolio de Desarrollo de Videojuegos
+  </footer>
 </body>
 </html>
