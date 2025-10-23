@@ -54,6 +54,8 @@
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem;
+      width: 100%;
     }
 
     section h3 {
@@ -75,7 +77,6 @@
       padding-top: 1.5rem;
     }
 
-
     ul {
       list-style-type: none;
       padding-left: 0;
@@ -93,10 +94,99 @@
       background-color: #475569;
     }
 
+    /* ===== ESTILOS PARA LA SECCIÓN DE CONTACTO ===== */
+    #contacto {
+      border-top: 2px solid #38bdf8;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+    }
+
+    .contacto-contenido {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contacto-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #334155;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .contacto-item:hover {
+      background-color: #475569;
+      transform: translateY(-2px);
+    }
+
+    .contacto-icono {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .contacto-texto {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contacto-titulo {
+      font-weight: 600;
+      color: #38bdf8;
+    }
+
+    .contacto-valor {
+      color: #e2e8f0;
+      text-decoration: none;
+    }
+
+    .contacto-valor:hover {
+      text-decoration: underline;
+    }
+
     footer {
       margin-top: 2rem;
       color: #94a3b8;
       font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* ===== MEDIA QUERIES PARA RESPONSIVIDAD ===== */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      section {
+        padding: 1.5rem;
+      }
+      
+      .contacto-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      
+      header h2 {
+        font-size: 1rem;
+      }
+      
+      section {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -126,6 +216,46 @@
       <li><strong>Engines:</strong> Unity, Godot</li>
       <li><strong>Lenguajes:</strong> C#</li>
     </ul>
+  </section>
+
+  <section id="contacto">
+    <h3>Contacto y Enlaces</h3>
+    <div class="contacto-contenido">
+      <div class="contacto-item">
+        <svg class="contacto-icono" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 6L12 13L2 6" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="contacto-texto">
+          <span class="contacto-titulo">Email Profesional</span>
+          <a href="mailto:brunonjmj@gmail.com" class="contacto-valor">brunonjmj@gmail.com</a>
+        </div>
+      </div>
+      
+      <div class="contacto-item">
+        <svg class="contacto-icono" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 19C9 16.7909 10.7909 15 13 15H16C18.2091 15 20 16.7909 20 19V21H9V19Z" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13 9C13 10.6569 11.6569 12 10 12C8.34315 12 7 10.6569 7 9C7 7.34315 8.34315 6 10 6C11.6569 6 13 7.34315 13 9Z" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 9C16 10.6569 14.6569 12 13 12C11.3431 12 10 10.6569 10 9C10 7.34315 11.3431 6 13 6C14.6569 6 16 7.34315 16 9Z" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="contacto-texto">
+          <span class="contacto-titulo">GitHub</span>
+          <a href="https://github.com/BrunonRed" target="_blank" class="contacto-valor">github.com/BrunonRed</a>
+        </div>
+      </div>
+      
+      <div class="contacto-item">
+        <svg class="contacto-icono" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 9H2V21H6V9Z" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="contacto-texto">
+          <span class="contacto-titulo">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/jesus-moreno-98119b2a0" target="_blank" class="contacto-valor">linkedin.com/in/jesus-moreno</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
